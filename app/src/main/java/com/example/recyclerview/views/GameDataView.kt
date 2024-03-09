@@ -11,9 +11,11 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
 @Composable
-fun GameDataView(modificador: Modifier = Modifier.fillMaxWidth()){
+fun GameDataView(modificador: Modifier = Modifier.fillMaxWidth(),
+                 console:String = "Juego",
+                 price: Int = 140){
     Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = modificador) {
-        Text(text = "PS4")
-        Text(text = "1600 MXN")
+        Text(text = console)
+        Text(text = "$$price MXN" )
     }
 }

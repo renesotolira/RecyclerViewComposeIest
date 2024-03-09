@@ -20,10 +20,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.recyclerview.R
+import com.example.recyclerview.models.Game
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
-fun CardGame(){
+fun CardGame( game: Game ){
     Card(modifier = Modifier.padding(8.dp)) {
         Row(modifier = Modifier.fillMaxWidth()) {
             //Imagen
@@ -31,7 +32,7 @@ fun CardGame(){
                 modifier = Modifier
                     .height(150.dp)
                     .width(120.dp),
-                painter = painterResource(id = R.drawable.resident04),
+                painter = painterResource(id = game.image),
                 contentDescription = "imagenDelJuego",
                 contentScale = ContentScale.Crop
             )
@@ -39,11 +40,11 @@ fun CardGame(){
             Column(modifier = Modifier.fillMaxWidth()){
 
                 Text(
-                    text = "Resident Evil 4",
+                    text = game.name,
                     modifier = Modifier.padding(top = 8.dp),
                     color = Color(0xFF673AB7)
                 )
-                GameDataView( Modifier.fillMaxWidth())
+                GameDataView( Modifier.fillMaxWidth(), game.console, game.price)
 
                 Button(onClick = { }) {
                     Text(text = "Comprar")
@@ -51,9 +52,6 @@ fun CardGame(){
             }
 
         }
-        //Nombre del juego
-        //COnsola y precio
-        //Button
     }
 }
 
