@@ -7,6 +7,6 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
 @Composable
-fun saludo(){
+fun saludox(){
     Text(text = "¿Costas?, te ves bien")
 }

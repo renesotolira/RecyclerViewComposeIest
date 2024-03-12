@@ -6,6 +6,6 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
 @Composable
-fun hola(){
+fun holxxxa(){
     Text(text = "Hola Mundo")
 }
